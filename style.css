@@ -1,0 +1,185 @@
+@import url('https://fonts.googleapis.com/css2?family=Rubik:ital,wght@0,300..900;1,300..900&display=swap');
+
+:root {
+    /* Fonts */
+    --font-title-size: 1.25rem;
+    --ff-main: 'Rubik';
+    --fw-light: 300;
+    --fw-mid: 400;
+    --fw-main: 500;
+    /* Colors */
+    /* ### Primary */
+
+--clr-Blue: hsl(246, 80%, 60%);
+
+--clr-Lightred-work: hsl(15, 100%, 70%);
+--clr-Softblue-play: hsl(195, 74%, 62%);
+--clr-Lightred-study: hsl(348, 100%, 68%);
+--clr-Limegreen-exercise: hsl(145, 58%, 55%);
+--clr-Violet-social: hsl(264, 64%, 52%);
+--clr-Softorange-selfcare: hsl(43, 84%, 65%);
+
+/* ### Neutral */
+
+--clr-Verydarkblue: hsl(226, 43%, 10%);
+--clr-Darkblue: hsl(235, 46%, 20%);
+--clr-Desaturatedblue: hsl(235, 45%, 61%);
+--clr-PaleBlue: hsl(236, 100%, 87%);
+}
+/* 1. Use a more-intuitive box-sizing model */
+*, *::before, *::after {
+    box-sizing: border-box;
+  }
+  
+  /* 2. Remove default margin */
+  * {
+    margin: 0;
+  }
+  
+  body {
+    /* 4. Improve text rendering */
+    -webkit-font-smoothing: antialiased;
+  }
+  
+  /* 5. Improve media defaults */
+  img, picture, video, canvas, svg {
+    display: block;
+    max-width: 100%;
+  }
+  
+  /* 6. Inherit fonts for form controls */
+  input, button, textarea, select {
+    font: inherit;
+  }
+  
+  /* 7. Avoid text overflows */
+  p, h1, h2, h3, h4, h5, h6 {
+    overflow-wrap: break-word;
+  }
+  
+  /* 8. Improve line wrapping */
+  p {
+    text-wrap: pretty;
+  }
+  h1, h2, h3, h4, h5, h6 {
+    text-wrap: balance;
+  }
+  
+  /*
+    9. Create a root stacking context
+  */
+  #root, #__next {
+    isolation: isolate;
+  }
+  html {
+    height: 100%;
+    background-color: var(--clr-Verydarkblue);
+    display: grid;
+    margin: 1.5rem;
+    margin-top: 3rem;
+    color: white;
+    font-family: var(--ff-main);
+  }
+  .jeremy__image {
+    width: 60px;
+    border: 2px solid white;
+    border-radius: 50%;
+  }
+  .jeremy__icon-flex {
+    background-color: var(--clr-Blue);
+    display: flex;
+    align-items: center;
+    gap: 1rem;
+    padding: 1.5rem;
+    padding-top: 2rem;
+    padding-bottom: 2rem;
+    border-radius: 1rem;
+    z-index: 3;
+  }
+  .jeremy__sub-title {
+    font-weight: var(--fw-light);
+    margin-bottom: .2rem;
+  }
+  .jeremy__main-title-name {
+    font-weight: var(--fw-mid);
+  }
+  .jeremy__date-buttons-flex {
+    display: flex;
+    justify-content: space-evenly;
+    z-index: 2;
+    margin-top: 1.5rem;
+  }
+  .main-card__controller-jeremy {
+    background-color: var(--clr-Darkblue);
+    border-radius: 1rem;
+    padding-bottom: 1.5rem;
+  }
+  .controller {
+    background-color: var(--clr-Darkblue);
+    color: var(--clr-Desaturatedblue);
+    border: transparent;
+    cursor: pointer;
+  }
+  .controller:hover {
+    color: white;
+  }
+  .tracking-card {
+    background-color: var(--clr-Lightred-work);
+    display: grid;
+    border-radius: 1.2rem; 
+    /* Slightly larger border radius on background card fixes slight peak through */
+    margin-top: 1.5rem;
+    margin-bottom: 1.5rem;
+    padding-top: 3rem;
+    background-image: url(/images/icon-work.svg);
+    background-repeat: no-repeat;
+    background-position: right top;
+    z-index: 1;
+  }
+  .work__image {
+    z-index: 1;
+    justify-self: end;
+  }
+  .work__time-data {
+    z-index: 3;
+    background-color: var(--clr-Darkblue);
+    padding-top: 2rem;
+    border-radius: 1rem;
+  }
+  .ellipses {
+    width: 21px;
+    height: 5px;
+  }
+  .title {
+    font-size: var(--font-title-size);
+  }
+  .work__fixed-elements-flex {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    margin-left: 1.5rem;
+    margin-right: 1.5rem;
+  }
+  .main-data-big {
+    font-size: 2rem;
+  }
+  .dynamic-data-flex {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    margin-top: .5rem;
+    margin-left: 1.5rem;
+    margin-right: 1.5rem;
+    margin-bottom: 1rem;
+    
+  }
+  .past-data-muted {
+    opacity: 0.8;
+  }
+  .hidden {
+    display: none;
+  }
+  .play {
+    background-color: var(--clr-Softblue-play);
+    background-image: url(/images/icon-play.svg);
+  }

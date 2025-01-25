@@ -10,62 +10,99 @@
   <script defer src="main.js"></script>
 </head>
 <body>
-
-  Report for
-  Jeremy Robson
-
-  Daily
-  Weekly
-  Monthly
-
-  Work
-  5hrs <!-- daily -->
-  Previous - 7hrs <!-- daily -->
-  32hrs <!-- weekly -->
-  Previous - 36hrs <!-- weekly -->
-  103hrs <!-- monthly -->
-  Previous - 128hrs <!-- monthly -->
-
-  Play
-  1hr <!-- daily -->
-  Previous - 2hrs <!-- daily -->
-  10hrs <!-- weekly -->
-  Previous - 8hrs <!-- weekly -->
-  23hrs <!-- monthly -->
-  Previous - 29hrs <!-- monthly -->
-
-  Study
-  0hrs <!-- daily -->
-  Previous - 1hr <!-- daily -->
-  4hrs <!-- weekly -->
-  Previous - 7hrs <!-- weekly -->
-  13hrs <!-- monthly -->
-  Previous - 19hrs <!-- monthly -->
-
-  Exercise
-  1hr <!-- daily -->
-  Previous - 1hr <!-- daily -->
-  4hrs <!-- weekly -->
-  Previous - 5hrs <!-- weekly -->
-  11hrs <!-- monthly -->
-  Previous - 18hrs <!-- monthly -->
-
-  Social
-  1hr <!-- daily -->
-  Previous - 3hrs <!-- daily -->
-  5hrs <!-- weekly -->
-  Previous - 10hrs <!-- weekly -->
-  21hrs <!-- monthly -->
-  Previous - 23hrs <!-- monthly -->
-
-  Self Care
-  0hrs <!-- daily -->
-  Previous - 1hr <!-- daily -->
-  2hrs <!-- weekly -->
-  Previous - 2hrs <!-- weekly -->
-  7hrs <!-- monthly -->
-  Previous - 11hrs <!-- monthly -->
-
-  
+<main class="tracking-dashboard__conatiner">
+  <section class="main-card__controller-jeremy">
+    <div class="jeremy__icon-flex">
+      <img class="jeremy__image" src="/images/image-jeremy.png" alt="An avatar of Jeremy Robson">
+      <div class="jeremy__mini-text-flex">
+        <p class="jeremy__sub-title">Report for</p>
+        <h1 class="jeremy__main-title-name">Jeremy Robson</h1>
+      </div>
+    </div>
+  <div class="jeremy__date-buttons-flex">
+    <button class="jeremy__daily controller">Daily</button>
+    <button class="jeremy__weekly controller">Weekly</button>
+    <button class="jeremy__monthly controller">Monthly</button>
+  </div>
+  </section>
+  <section class="tracking__cards">
+    <article class="tracking-card work">
+      <div class="work__time-data">
+        <!-- This text and ellipses icon dont take any data from JSON file hence class name -->
+        <div class="work__fixed-elements-flex">
+          <p class="work-card title">Work</p>
+          <img src="images/icon-ellipsis.svg" alt="Icon of an ellipsis used to share a card" class="ellipses">
+        </div>
+        <div class="dynamic-data-flex daily">
+          <p class="main-data-big">5hrs <!-- daily --></p>
+          <p class="past-data-muted">Yesterday - 7hrs <!-- daily --></p>
+        </div>
+        <div class="dynamic-data-flex weekly hidden">
+          <p class="main-data-big">5hrs <!-- daily --></p>
+          <p class="past-data-muted">Last Week - 7hrs <!-- daily --></p>
+        </div>
+        <div class="dynamic-data-flex monthly hidden">
+          <p class="main-data-big">5hrs <!-- daily --></p>
+          <p class="past-data-muted">Last Month - 7hrs <!-- daily --></p>
+        </div>
+      </div>
+    </article>
+    <article class="tracking-card play">
+      <div class="work__time-data">
+        <!-- This text and ellipses icon dont take any data from JSON file hence class name -->
+        <div class="work__fixed-elements-flex">
+          <p class="work-card title">Play</p>
+          <img src="images/icon-ellipsis.svg" alt="Icon of an ellipsis used to share a card" class="ellipses">
+        </div>
+        <div class="dynamic-data-flex daily">
+          <p class="main-data-big">5hrs <!-- daily --></p>
+          <p class="past-data-muted">Yesterday - 7hrs <!-- daily --></p>
+        </div>
+        <div class="dynamic-data-flex weekly hidden">
+          <p class="main-data-big">5hrs <!-- daily --></p>
+          <p class="past-data-muted">Last Week - 7hrs <!-- daily --></p>
+        </div>
+        <div class="dynamic-data-flex monthly hidden">
+          <p class="main-data-big">5hrs <!-- daily --></p>
+          <p class="past-data-muted">Last Month - 7hrs <!-- daily --></p>
+        </div>
+      </div>
+    </article>
+  <div class="hidden">
+    
+      Study
+      0hrs <!-- daily -->
+      Previous - 1hr <!-- daily -->
+      4hrs <!-- weekly -->
+      Previous - 7hrs <!-- weekly -->
+      13hrs <!-- monthly -->
+      Previous - 19hrs <!-- monthly -->
+    
+      Exercise
+      1hr <!-- daily -->
+      Previous - 1hr <!-- daily -->
+      4hrs <!-- weekly -->
+      Previous - 5hrs <!-- weekly -->
+      11hrs <!-- monthly -->
+      Previous - 18hrs <!-- monthly -->
+    
+      Social
+      1hr <!-- daily -->
+      Previous - 3hrs <!-- daily -->
+      5hrs <!-- weekly -->
+      Previous - 10hrs <!-- weekly -->
+      21hrs <!-- monthly -->
+      Previous - 23hrs <!-- monthly -->
+    
+      Self Care
+      0hrs <!-- daily -->
+      Previous - 1hr <!-- daily -->
+      2hrs <!-- weekly -->
+      Previous - 2hrs <!-- weekly -->
+      7hrs <!-- monthly -->
+      Previous - 11hrs <!-- monthly -->
+  </div>
+  </section>
+</main>
 </body>
 </html>
