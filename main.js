@@ -19,6 +19,22 @@ weeklyButton.addEventListener('click', function() {
     dynamicDataWeek.forEach(element => {
         element.classList.remove('hidden');
     });
+    fetch('/data.json')
+.then(function(response) {
+    return response.json();
+})
+.then(function(data) {
+    const dynamicDataWeek = document.querySelectorAll('.dynamic-data-flex.weekly');
+    dynamicDataWeek.forEach((element, index) => {
+        const mainDataBig = element.querySelector('.main-data-big');
+        const pastDataMuted = element.querySelector('.past-data-muted');
+        const current = data[index].timeframes.weekly.current;
+        const previous = data[index].timeframes.weekly.previous;
+
+        mainDataBig.textContent = `${current}hrs`; // Set current data
+        pastDataMuted.textContent = `Last Week - ${previous}hrs`; // Set previous data
+    });
+});
 });
 dailyButton.addEventListener('click', function() {
     dailyButton.classList.add('active');
@@ -33,6 +49,22 @@ dailyButton.addEventListener('click', function() {
     dynamicDataDay.forEach(element => {
         element.classList.remove('hidden');
     });
+    fetch('/data.json')
+      .then(function(response) {
+          return response.json();
+      })
+      .then(function(data) {
+          const dynamicDataDay = document.querySelectorAll('.dynamic-data-flex.daily');
+          dynamicDataDay.forEach((element, index) => {
+              const mainDataBig = element.querySelector('.main-data-big');
+              const pastDataMuted = element.querySelector('.past-data-muted');
+              const current = data[index].timeframes.daily.current;
+              const previous = data[index].timeframes.daily.previous;
+
+              mainDataBig.textContent = `${current}hrs`; // Set current data
+              pastDataMuted.textContent = `Yesterday - ${previous}hrs`; // Set previous data
+          });
+      });
 });
 monthlyButton.addEventListener('click', function() {
     monthlyButton.classList.add('active');
@@ -47,7 +79,20 @@ monthlyButton.addEventListener('click', function() {
     dynamicDataMonth.forEach(element => {
         element.classList.remove('hidden');
     });
-});
-
 fetch('/data.json')
-.then(res => console.log(res))
+.then(function(response) {
+    return response.json();
+})
+.then(function(data) {
+    const dynamicDataMonth = document.querySelectorAll('.dynamic-data-flex.monthly');
+    dynamicDataMonth.forEach((element, index) => {
+        const mainDataBig = element.querySelector('.main-data-big');
+        const pastDataMuted = element.querySelector('.past-data-muted');
+        const current = data[index].timeframes.monthly.current;
+        const previous = data[index].timeframes.monthly.previous;
+
+        mainDataBig.textContent = `${current}hrs`; // Set current data
+        pastDataMuted.textContent = `Last Month - ${previous}hrs`; // Set previous data
+    });
+});
+});
