@@ -49,4 +49,5 @@ monthlyButton.addEventListener('click', function() {
     });
 });
 
-
+fetch('/data.json')
+.then(res => console.log(res))
